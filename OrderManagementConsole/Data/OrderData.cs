@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OrderManagementConsole.Data;
+
+public class OrderData
+{
+    public List<Order> Orders = new List<Order> 
+        {
+            new (1, 0, 560.388738292149790m, new DateTime(2024, 8, 24, 20, 35, 40), OrderStatus.Processing),
+            new (2, 0, 144.168501609242650m, new DateTime(2023, 9, 21, 22, 31, 23), OrderStatus.Cancelled),
+            new (3, 0, 361.35359331240520m, new DateTime(2025, 6, 21, 7, 38, 3), OrderStatus.Processing),
+            new (4, 1, 44.9869904850851110m, new DateTime(2024, 4, 12, 12, 47, 15), OrderStatus.Pending),
+            new (5, 1, 908.07538893466240m, new DateTime(2023, 9, 4, 5, 54, 59), OrderStatus.Processing),
+            new (6, 1, 610.508696642448220m, new DateTime(2024, 2, 13, 19, 44, 11), OrderStatus.Pending),
+            new (7, 2, 296.743441951472770m, new DateTime(2024, 4, 25, 17, 7, 23), OrderStatus.Processing),
+            new (8, 2, 834.24622392741970m, new DateTime(2025, 2, 27, 6, 58, 45), OrderStatus.Cancelled),
+            new (9, 2, 157.82957001538660m, new DateTime(2024, 11, 1, 9, 2, 13), OrderStatus.Processing),
+            new (10, 3, 46.0137434658002650m, new DateTime(2024, 10, 7, 0, 7, 51), OrderStatus.Cancelled),
+            new (11, 3, 921.451520188065340m, new DateTime(2023, 9, 12, 5, 3, 28), OrderStatus.Processing),
+            new (12, 3, 526.427369064384580m, new DateTime(2023, 9, 12, 1, 40, 38), OrderStatus.Pending),
+            new (13, 4, 727.267635037356040m, new DateTime(2023, 11, 24, 23, 17, 28), OrderStatus.Cancelled),
+            new (14, 4, 614.558794622548150m, new DateTime(2024, 7, 13, 1, 21, 21), OrderStatus.Completed),
+            new (15, 4, 838.924351550163550m, new DateTime(2023, 10, 28, 13, 24, 54), OrderStatus.Cancelled),
+            new (16, 5, 87.9385932993875680m, new DateTime(2023, 12, 12, 22, 8, 57), OrderStatus.Cancelled),
+            new (17, 5, 832.568050588397410m, new DateTime(2024, 1, 25, 8, 49, 28), OrderStatus.Cancelled),
+            new (18, 5, 429.178088452434850m, new DateTime(2024, 5, 11, 18, 0, 50), OrderStatus.Completed),
+            new (19, 6, 522.645646472827120m, new DateTime(2024, 5, 2, 19, 57, 44), OrderStatus.Processing),
+            new (20, 6, 725.896522683765280m, new DateTime(2024, 12, 2, 10, 48, 41), OrderStatus.Pending),
+            new (21, 6, 728.428511954941480m, new DateTime(2023, 12, 2, 4, 42, 10), OrderStatus.Pending),
+            new (22, 7, 993.30799032730990m, new DateTime(2024, 10, 13, 15, 25, 1), OrderStatus.Pending),
+            new (23, 7, 995.37633964057420m, new DateTime(2024, 6, 7, 9, 0, 49), OrderStatus.Pending),
+            new (24, 7, 303.420009728605870m, new DateTime(2023, 12, 20, 15, 20, 26), OrderStatus.Completed),
+            new (25, 8, 73.1918258373560950m, new DateTime(2024, 12, 18, 12, 43, 24), OrderStatus.Pending),
+            new (26, 8, 569.303667434833750m, new DateTime(2024, 4, 3, 17, 41, 44), OrderStatus.Cancelled),
+            new (27, 8, 313.802164453006450m, new DateTime(2024, 5, 14, 16, 12, 2), OrderStatus.Cancelled),
+            new (28, 9, 60.56895732650740m, new DateTime(2024, 6, 5, 11, 55, 26), OrderStatus.Completed),
+            new (29, 9, 395.167154368403440m, new DateTime(2025, 4, 5, 2, 19, 9), OrderStatus.Pending),
+            new (30, 9, 267.544227426416920m, new DateTime(2024, 3, 15, 18, 21, 36), OrderStatus.Completed),
+            new (31, 10, 278.496394659751060m, new DateTime(2023, 9, 4, 15, 0, 9), OrderStatus.Completed),
+            new (32, 10, 845.649103895633170m, new DateTime(2025, 2, 8, 16, 12, 42), OrderStatus.Pending),
+            new (33, 10, 110.002780784324440m, new DateTime(2024, 7, 31, 19, 33, 45), OrderStatus.Pending),
+            new (34, 11, 994.070782268088130m, new DateTime(2024, 6, 17, 14, 37, 6), OrderStatus.Completed),
+            new (35, 11, 973.528963050299140m, new DateTime(2023, 10, 2, 7, 17, 24), OrderStatus.Cancelled),
+            new (36, 11, 675.818753875537240m, new DateTime(2025, 7, 14, 12, 9, 20), OrderStatus.Pending),
+            new (37, 12, 786.861085913518870m, new DateTime(2025, 7, 29, 19, 59, 13), OrderStatus.Pending),
+            new (38, 12, 954.633938651331940m, new DateTime(2024, 11, 13, 18, 40, 12), OrderStatus.Processing),
+            new (39, 12, 720.342290368972360m, new DateTime(2024, 9, 24, 2, 5, 34), OrderStatus.Completed),
+            new (40, 13, 402.640537347534520m, new DateTime(2025, 4, 30, 13, 21, 57), OrderStatus.Completed),
+            new (41, 13, 568.075728725130880m, new DateTime(2023, 10, 10, 3, 30, 58), OrderStatus.Pending),
+            new (42, 13, 988.195063813199650m, new DateTime(2025, 1, 4, 19, 12, 38), OrderStatus.Cancelled),
+            new (43, 14, 313.980669394284520m, new DateTime(2025, 7, 2, 17, 14, 46), OrderStatus.Pending),
+            new (44, 14, 278.88471564544810m, new DateTime(2024, 9, 17, 6, 59, 35), OrderStatus.Cancelled),
+            new (45, 14, 492.643467838834390m, new DateTime(2024, 6, 15, 15, 50, 15), OrderStatus.Pending),
+            new (46, 15, 95.0485154909616820m, new DateTime(2024, 2, 14, 1, 30, 9), OrderStatus.Processing),
+            new (47, 15, 566.949880777721860m, new DateTime(2024, 10, 13, 12, 22, 31), OrderStatus.Pending),
+            new (48, 15, 532.697594070025990m, new DateTime(2024, 7, 6, 20, 10, 49), OrderStatus.Pending),
+            new (49, 16, 286.765583879400220m, new DateTime(2023, 9, 30, 16, 29, 16), OrderStatus.Pending),
+            new (50, 16, 348.117337846704790m, new DateTime(2024, 8, 23, 7, 32, 19), OrderStatus.Processing),
+            new (51, 16, 526.188703955911030m, new DateTime(2024, 7, 21, 23, 27, 49), OrderStatus.Completed),
+            new (52, 17, 533.708754940629280m, new DateTime(2024, 1, 20, 18, 10, 10), OrderStatus.Pending),
+            new (53, 17, 547.744949185023910m, new DateTime(2024, 8, 11, 3, 58, 3), OrderStatus.Cancelled),
+            new (54, 17, 364.474001511794890m, new DateTime(2025, 2, 24, 14, 44, 11), OrderStatus.Completed),
+            new (55, 18, 755.037145439534530m, new DateTime(2025, 6, 20, 20, 29, 51), OrderStatus.Processing),
+            new (56, 18, 254.501346901394440m, new DateTime(2025, 5, 8, 4, 59, 24), OrderStatus.Completed),
+            new (57, 18, 755.343411867041680m, new DateTime(2025, 6, 12, 10, 55, 2), OrderStatus.Cancelled),
+            new (58, 19, 751.034557309810060m, new DateTime(2025, 1, 22, 22, 56, 30), OrderStatus.Cancelled),
+            new (59, 19, 448.879202935104250m, new DateTime(2024, 12, 21, 11, 2, 38), OrderStatus.Cancelled),
+            new (60, 19, 913.345947029843020m, new DateTime(2024, 5, 22, 16, 43, 53), OrderStatus.Pending)
+        };
+}
