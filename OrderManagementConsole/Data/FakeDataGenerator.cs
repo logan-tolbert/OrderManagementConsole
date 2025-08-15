@@ -23,7 +23,7 @@ public static class FakeDataGenerator
             .RuleFor(o => o.Id, f => f.IndexFaker)
             .RuleFor(o => o.CustomerId, f => f.Random.Int(1, 100))
             .RuleFor(o => o.Total, f => f.Random.Decimal(10, 1000)) 
-            .RuleFor(o => o.Date, f => f.Date.Past(2)) 
+            .RuleFor(o => o.OrderDate, f => f.Date.Past(2)) 
             .RuleFor(o => o.Status, f => f.PickRandom<OrderStatus>());
 
         return orderFaker.Generate(count);
@@ -41,7 +41,7 @@ public static class FakeDataGenerator
                 .RuleFor(o => o.Id, f => orderIdCounter++)
                 .RuleFor(o => o.CustomerId, f => customer.Id)
                 .RuleFor(o => o.Total, f => f.Random.Decimal(10, 1000))
-                .RuleFor(o => o.Date, f => f.Date.Past(2))
+                .RuleFor(o => o.OrderDate, f => f.Date.Past(2))
                 .RuleFor(o => o.Status, f => f.PickRandom<OrderStatus>());
 
             orders.AddRange(orderFaker.Generate(ordersPerCustomer));

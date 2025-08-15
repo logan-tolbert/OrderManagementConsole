@@ -11,7 +11,7 @@ public class QueryRunner
     {
         var query = Orders
             .Where(o => o.Total > price)
-            .OrderByDescending(o => o.Date);
+            .OrderByDescending(o => o.OrderDate);
         return query;
     }
 
@@ -40,7 +40,7 @@ public class QueryRunner
 
     }
 
-    public IEnumerable<IGrouping<string, (string FullName, int OrderId, decimal Total)>> FilterCustomerOrdersByMinimumTotal(decimal total)
+    public IEnumerable<IGrouping<string, (string FullName, int? OrderId, decimal Total)>> FilterCustomerOrdersByMinimumTotal(decimal total)
     {
         var query = Orders
             .Where(o => o.Total > total)
@@ -54,7 +54,7 @@ public class QueryRunner
         return query;
     }
 
-    public (string FullName, int OrderId, DateTime Date, decimal Total, OrderStatus Status) GetMostRecentOrder(string lastName)
+    public (string FullName, int? OrderId, DateTime Date, decimal Total, OrderStatus Status) GetMostRecentOrder(string lastName)
     {
         var query = Customers
             .Where(c => c.LastName.Equals(lastName, StringComparison.OrdinalIgnoreCase))
@@ -62,8 +62,8 @@ public class QueryRunner
                 Orders,
                 c => c.Id,
                 o => o.CustomerId,
-                (c, o) => (FullName: $"{c.FirstName} {c.LastName}", OrderId: o.Id, o.Date, o.Total, o.Status))
-            .OrderByDescending(o => o.Date).First();
+                (c, o) => (FullName: $"{c.FirstName} {c.LastName}", OrderId: o.Id, o.OrderDate, o.Total, o.Status))
+            .OrderByDescending(o => o.OrderDate).First();
         return query;
     }
 
