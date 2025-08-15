@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace OrderManagementConsole.Enums;
+
 public enum OrderStatus
 {
     Pending,

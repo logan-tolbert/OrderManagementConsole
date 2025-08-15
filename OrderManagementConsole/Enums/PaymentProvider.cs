@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrderManagementConsole.Enums;
+﻿namespace OrderManagementConsole.Enums;
 
 public enum PaymentProvider
 {
@@ -16,6 +10,6 @@ public enum PaymentProvider
     Braintree,
     Adyen,
     WorldPay,
-    Internal,         // For cash, checks handled internally
-    Manual
+    Internal,         // For cash drawer, checks, internal ledger entries handled internally
+    Manual            // Consumer bank, wire transfer, money order, etc.
 }

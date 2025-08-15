@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using OrderManagementConsole.Enums;
-using System.Data;
-
+﻿using OrderManagementConsole.Enums;
 public class Order
 {
     public int? Id { get; set; }

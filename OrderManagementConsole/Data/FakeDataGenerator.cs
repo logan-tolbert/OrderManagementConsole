@@ -1,7 +1,6 @@
 using Bogus;
+using OrderManagementConsole.Enums;
 using OrderManagementConsole.Models;
-using System;
-using System.Collections.Generic;
 
 public static class FakeDataGenerator
 {
